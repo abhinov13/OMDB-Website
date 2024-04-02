@@ -1,0 +1,22 @@
+.NotFound {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    overflow: hidden;
+}
+
+.NotFound>div{
+    font-size: 5vw;
+    font-weight: bolder;
+    vertical-align: middle;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    background-size: contain;
+}

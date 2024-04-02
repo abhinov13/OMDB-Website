@@ -1,23 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import BookmarkedProvider from './Presentation/Context/Bookmarked';
+import useScreen from './Presentation/CustomHooks/useScreen';
+import useSearchParams from './Presentation/CustomHooks/useSearchParams';
+import BookmarkedScreen from './Presentation/Screen/BookmarkedScreen/BookmarkedScreen';
+import ErrorScreen from './Presentation/Screen/ErrorScreen/ErrorScreen';
+import SearchScreen from './Presentation/Screen/SearchScreen/SearchScreen';
 
 function App() {
+  const [screen, navigate] = useScreen();
+  const {params} = useSearchParams();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className="App"
+      style={{
+        background: 'url("./background.jpeg")',
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover"
+      }
+      }
+    >
+      <BookmarkedProvider>
+        {
+          screen === "bookmarked" ?
+            <BookmarkedScreen navigate={navigate} />
+            : screen === "search" ?
+              <SearchScreen navigate={navigate} params={params} />
+              : <ErrorScreen navigate={navigate} />
+        }
+      </BookmarkedProvider>
     </div>
   );
 }

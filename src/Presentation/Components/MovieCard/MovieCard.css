@@ -1,0 +1,143 @@
+:root{
+    --cardWidth: 15vw;
+}
+
+.MovieCard {
+    width: var(--cardWidth);
+    min-width: 120px;
+    color: white;
+    transition: scale 0.3s;
+    background-color: #111111;
+}
+
+.MovieCardPlaceHolder {
+    width: var(--cardWidth);
+    min-width: 120px;
+}
+
+.MovieCard:hover {
+    scale: 1.05;
+}
+
+.Poster {
+    position: relative;
+    min-width: 120px;
+    min-height: 180px;
+    width: var(--cardWidth);
+    height: 22.5vw;
+}
+
+.Poster>img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+.Poster>.ImagePlaceHolder {
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    background-color: #222222;
+}
+
+.like {
+    position: absolute;
+    z-index: 2;
+    height: 10%;
+    width: 40%;
+    min-height: 30px;
+    min-width: 80px;
+    bottom: 5%;
+    right: 2%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #101010;
+}
+
+.likePlaceholder {
+    position: absolute;
+    z-index: 2;
+    height: 10%;
+    width: 40%;
+    min-height: 30px;
+    min-width: 80px;
+    bottom: 5%;
+    right: 2%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #555555;
+}
+
+.saved>.SaveImg{
+    width: 0 !important;
+    transform: translateX(100px) !important;
+}
+
+
+.like>div{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.like>.SaveImg{
+    height: 100%;
+    width: 35%;
+    background-color: green;
+    transition: all 0.3s;
+    transform: skew(-20deg);
+}
+
+.SaveImg>img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;    
+    transform: skew(20deg);
+}
+
+.MovieInfo {
+    width: 96%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.MovieInfoPlaceholder
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+    align-items: flex-start;
+    min-height: 40px;
+    min-width: 96%;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: #444444;
+}
+
+.MovieInfoPlaceholder>div:nth-child(1){
+    width: 70%;
+    height: 15px;
+    background-color: #666666;
+}
+.MovieInfoPlaceholder>div:nth-child(2){
+    width: 30%;
+    height: 15px;
+    background-color: #666666;
+}
+
+.MovieInfo>span {
+    color: grey;
+}
