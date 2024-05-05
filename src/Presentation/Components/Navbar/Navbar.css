@@ -1,16 +1,15 @@
 .Navbar {
     align-self: center;
-    position: sticky;
     top: 0;
     width: 100vw;
     max-width: 100vw;
     min-height: 80px;
-    max-height: 7vh;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 100;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 5px;
 }
 
 .Filter {
@@ -18,7 +17,7 @@
     width: 80%;
     min-width: 300px;
     max-width: 100vw;
-    overflow-x: scroll;
+    flex-wrap: wrap;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -36,6 +35,8 @@
     display: flex;
     flex-direction: row;
     gap: 4px;
+    max-width: 100vw;
+    justify-content: center;
 }
 
 .Links>input{
@@ -80,4 +81,32 @@
 
 .Filter>img {
     height: 50px;
+}
+
+@media only screen and (max-width: 700px)
+{
+    .Links{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .Links>input{
+        padding: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding: 5px;
+        width: 90%;
+        height: 20px;
+    }
+
+    .Links>select, .Links>button{
+        width: 200px;
+        min-height: 30px;
+        height: 30px;
+    }
+
+    .Filter{
+        flex-direction: column;
+    }
 }

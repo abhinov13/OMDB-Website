@@ -26,3 +26,21 @@ body {
     padding-top: 2vh;
     padding-bottom: 5vh;
 }
+
+.errorMessage{
+    color: white;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+}
+
+.errorMessage>div{
+    background-color: #57606f;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 90vw;
+}
